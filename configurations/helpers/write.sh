@@ -57,7 +57,7 @@ write_environment_configuration() {
 
     http {
         server {
-            listen 80;
+            listen ${PORT:-80};
 EOF
 
     # Loop through each service

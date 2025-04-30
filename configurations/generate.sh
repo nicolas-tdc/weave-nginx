@@ -30,6 +30,7 @@ if [ -z "$1" ]; then
             echo -e "\e[33mConfiguration file for $env_name already exists. Skipping...\e[0m"
         else
             echo -e "\e[32mGenerating configuration for $env_name in $configurations_directory...\e[0m"
+            prepare_environment_files "$env_name"
 
             write_environment_configuration \
                 "$env_name" \
@@ -46,6 +47,7 @@ else
         echo -e "\e[33mConfiguration file for $env_name already exists. Skipping...\e[0m"
     else
         echo -e "\e[32mGenerating configuration for $env_name in $configurations_directory...\e[0m"
+        prepare_environment_files "$env_name"
 
         write_environment_configuration \
             "$env_name" \
