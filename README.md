@@ -7,7 +7,7 @@
 
 - **Set your environment variables for each environment**
 
-Modify default-env files for remote modifications
+Modify env-remote files for remote modifications
 
 Modify root environment files for local modifications
 
@@ -16,12 +16,12 @@ Modify root environment files for local modifications
 ## Available scripts and commands
 **Execute from your service's root directory**
 
-- **scripts/generate-configuration.sh**
+- **configurations/generate.sh**
 
 *Generates a default nginx configuration for all your services*
 *Backs-up the previous configuration in 'nginx.conf.bak'*
 ```bash
-scripts/generate-configuration.sh
+configurations/generate.sh
 ```
 
 - **r | run**

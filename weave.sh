@@ -59,7 +59,7 @@ set -e
     fi
 
     # Aggregate relevant environment files
-    prepare_environment_file "$env_name"
+    prepare_environment_files "$env_name"
 
     # Execute the appropriate script based on command line argument
     command_name="$1"
