@@ -9,7 +9,6 @@
 
 Modify default-env files for remote modifications
 
-Copy env files to the service's root directory.
 Modify root environment files for local modifications
 
 - Configure nginx.conf file manually or generate it automatically using *generate-configuration.sh* script.

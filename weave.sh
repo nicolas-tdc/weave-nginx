@@ -37,11 +37,8 @@ set -e
                 env_name="staging"
                 shift
                 ;;
-            -*|--*)
-                # Handle unknown options
-                echo -e "\e[31m$SERVICE_NAME: Invalid option "$1". Exiting...\e[0m"
-                log_service_usage
-                exit 1
+            --s=*|--service=*)
+                shift
                 ;;
             *)
                 # Handle positional arguments

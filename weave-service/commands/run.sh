@@ -45,3 +45,5 @@ echo -e "\e[32m$SERVICE_NAME: Container started.\e[0m"
 echo -e "\e[33m$SERVICE_NAME: Cleaning up unused Docker images...\e[0m"
 docker system prune -af
 echo -e "\e[32m$SERVICE_NAME: Unused Docker images cleaned up.\e[0m"
+
+echo -e "\e[32m$SERVICE_NAME: Service started successfully.\e[0m"
