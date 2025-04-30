@@ -18,11 +18,12 @@ Modify root environment files for local modifications
 
 - **configurations/generate.sh**
 
-*Generates a default nginx configuration for all your services*
-*Backs-up the previous configuration in 'nginx.conf.bak'*
+Generates basic nginx configurations for your applications environments.
 ```bash
-configurations/generate.sh
+configurations/generate.sh <environment_name(optional)>
 ```
+*Optional: Select environment with first argument dev|staging|prod*
+*If none is given, will try to generate for all three environments*
 
 - **r | run**
 
