@@ -13,6 +13,14 @@ else
     exit 1
 fi
 
+# Source utilities helpers
+if [ -f "./weave-service/helpers/environment.sh" ]; then
+    source ./weave-service/helpers/environment.sh
+else
+    echo -e "\e[31mCannot find 'environment' helpers file. Exiting...\e[0m"
+    exit 1
+fi
+
 # Source docker helpers
 if [ -f "./weave-service/helpers/docker.sh" ]; then
     source ./weave-service/helpers/docker.sh
@@ -24,6 +32,8 @@ fi
 env_name="$1"
 
 echo -e "\e[33m$SERVICE_NAME: Trying to start in environment '$env_name'...\e[0m"
+
+prepare_nginx_configuration "$env_name"
 
 # Prepare docker
 echo -e "\e[33m$SERVICE_NAME: Preparing docker...\e[0m"

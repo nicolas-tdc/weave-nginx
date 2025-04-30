@@ -37,7 +37,7 @@ if [ -z "$1" ]; then
                 "$configurations_directory" \
                 "$services_directory"
 
-            echo -e "\e[32mnginx.$env_name.conf generated successfully in $CONFIGURATIONS_DIRECTORY.\e[0m"
+            echo -e "\e[32mnginx.$env_name.conf generated successfully in $configurations_directory.\e[0m"
         fi
     done
 else
