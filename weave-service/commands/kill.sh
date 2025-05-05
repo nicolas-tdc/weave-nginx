@@ -29,8 +29,13 @@ check_docker
 echo -e "\e[32m$SERVICE_NAME: Docker is ready.\e[0m"
 
 # Stop existing containers
-echo -e "\e[33m$SERVICE_NAME: Stopping existing containers...\e[0m"
-docker-compose -f docker-compose.yml -f docker-compose.$env_name.yml down
+if [ "$env_name" == "dev" ]; then
+    echo -e "\e[33m$SERVICE_NAME: Stopping in development mode...\e[0m"
+    docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
+else
+    echo -e "\e[33m$SERVICE_NAME: Stopping...\e[0m"
+    docker-compose down
+fi
 echo -e "\e[32m$SERVICE_NAME: Stopped existing containers.\e[0m"
 
 # Remove unused networks

@@ -7,10 +7,6 @@
 
 - **Set your environment variables for each environment**
 
-Modify env-remote files for remote modifications
-
-Modify root environment files for local modifications
-
 - Configure nginx.conf file manually or generate it automatically using *generate-configuration.sh* script.
 
 ## Available scripts and commands
