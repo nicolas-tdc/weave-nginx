@@ -5,6 +5,8 @@ services:
     image: nginx:alpine
     ports:
       - "${PORT}:${PORT}"
+    env_file:
+      - .env
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     extra_hosts:
